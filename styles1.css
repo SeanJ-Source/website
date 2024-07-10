@@ -8,7 +8,7 @@ header {
   text-align: center;
   line-height: 3em;
   font-size: 3rem;
-  font-family: 'Zen Loop', italic;
+  font-family: "zen loop", italic;
   letter-spacing: 8px;
   background-image: linear-gradient(43deg, #eedd28 25%, #451dff 76%, #eedd28);
   background-clip: text;
@@ -37,44 +37,37 @@ header {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  background: navy;
-  color: yellow;
-  padding: 0.5rem;
-  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
   aspect-ratio: 1 / 1.5;
 }
 
-.card__img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
 .player_content {
-  margin-top: auto;
+  background: navy;
+  color: yellow;
+  align-self: end;
+  margin: .5rem .5rem .5rem;
+  padding: .5rem;
+  box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
 }
 
 .card_title {
   font-size: 1.25rem;
   line-height: 1.1;
+  color: yellow;
 }
 
-@media (min-width: 40em) {
-  .card.featured {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
+.card_title::content {
+  color: yellow;
+} 
 
-  .card.featured .card__img {
-    aspect-ratio: 1 / 1.15;
-  }
+.card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 
-  .card.featured .card_title {
-    font-size: 1.75rem;
-  }
+a {
+  color: yellow;
+  text-decoration: overline;
 }
 
 .card.runnerUp {
@@ -82,12 +75,7 @@ header {
 }
 
 .card.runnerUp:hover {
-  transform: scale(1.55);
-}
-
-a {
-  color: yellow;
-  text-decoration: overline;
+  transform: scale(1.5);
 }
 
 a:active {
@@ -130,68 +118,45 @@ a:active {
   font-size: 2rem;
 }
 
-
-@media (max-width: 768px) {
+@media (min-width: 48em) {
   header {
-    font-size: 2.5rem;
-    line-height: 2.5em;
+    font-size: 4rem;
   }
 
-  .container {
-    padding-inline: 1rem;
+  .card.featured {
+    grid-row: span 2;
+    grid-column: span 2;
   }
 
-  .player_grid {
-    gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  .card.featured .card__img {
+    aspect-ratio: 1 / 1.15;
   }
 
-  .card {
-    aspect-ratio: 1 / 1.5;
-  }
-
-  .player_content {
-    margin: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .card_title {
-    font-size: 1rem;
+  .card.featured .card_title {
+    font-size: 1.75rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 64em) {
   header {
+    font-size: 5rem;
+  }
+
+  .card.featured .card_title {
     font-size: 2rem;
-    line-height: 2em;
+  }
+}
+
+@media (min-width: 75em) {
+  header {
+    font-size: 6rem;
+  }
+
+  .container {
+    max-width: 120rem;
   }
 
   .player_grid {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  }
-
-  .card {
-    aspect-ratio: 1 / 1.5;
-  }
-
-  .player_content {
-    margin: 0.25rem;
-    padding: 0.25rem;
-  }
-
-  .card_title {
-    font-size: 0.875rem;
-  }
-
-  .contact-container h1 {
-    font-size: 1.5rem;
-  }
-
-  .contact-button {
-    padding: 8px 16px;
-  }
-
-  .contact {
-    font-size: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
