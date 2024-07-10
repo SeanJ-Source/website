@@ -8,7 +8,7 @@ header {
   text-align: center;
   line-height: 3em;
   font-size: 3rem;
-  font-family: "zen loop", italic;
+  font-family: 'Zen Loop', italic;
   letter-spacing: 8px;
   background-image: linear-gradient(43deg, #eedd28 25%, #451dff 76%, #eedd28);
   background-clip: text;
@@ -37,38 +37,29 @@ header {
 }
 
 .card {
-  aspect-ratio: 1 / 1.5;
   display: flex;
   flex-direction: column;
+  background: navy;
+  color: yellow;
+  padding: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
+  aspect-ratio: 1 / 1.5;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .player_content {
-  background: navy;
-  color: yellow;
-  align-self: end;
-  margin: 0.5rem 0.5rem 0.5rem;
-  padding: 0.5rem;
-  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  margin-top: auto;
 }
 
 .card_title {
   font-size: 1.25rem;
   line-height: 1.1;
-  color: yellow;
-}
-
-.card_title::content {
-  color: yellow;
-}
-
-.card__img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 
 @media (min-width: 40em) {
@@ -91,7 +82,7 @@ header {
 }
 
 .card.runnerUp:hover {
-  transform: scale(1.5);
+  transform: scale(1.05);
 }
 
 a {
