@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&family=Zen+Loop&display=swap');
+
+
+
+body {
+  background: #c2d9de;
+}
+
+header {
+  text-align: center;
+  line-height: 3em;
+  font-size: 3rem;
+  font-family: "zen loop", italic;
+  letter-spacing: 8px;
+  background-image: linear-gradient(43deg, #eedd28 25%, #451dff 76%, #eedd28);
+  background-clip: text;
+  color:transparent;
+  
+}
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.player_grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 
+  repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+  aspect-ratio: 1 / 1.5;
+}
+
+.player_content {
+  background: navy;
+  color: yellow;
+  align-self: end;
+  margin: .5rem .5rem .5rem;
+  padding: .5rem;
+  box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.card_title {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  color: yellow;
+}
+
+.card_title::content {
+  color:yellow;
+} 
+
+.card__img {
+  width:100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (min-width:40em) {
+.card.featured {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.card.featured .card__img {
+  aspect-ratio: 1 / 1.15;
+}
+
+.card.featured .card_title {
+  font-size: 1.75rem;
+}
+}
+
+.card.runnerUp {
+  aspect-ratio: 1 / 1.7;
+}
+
+.card.runnerUp:hover {
+  transform: scale(1.5);
+}
+
+a {
+  color: yellow;
+  text-decoration:overline;
+}
+
+a:active {
+  color: white;
+}
+
+.contact-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-container h1 {
+  font-family: 'Zen Loop', cursive;
+  font-size: 2rem;
+  color: #451dff;
+}
+
+.contact-container p {
+  color: #333;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  background-color: #007BFF;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+  
+}
+
+.contact {
+  background-image: linear-gradient(97deg, #f53a67 35%, #0e6c9e 65%, #e49d0e);
+  background-clip: text;
+  color:transparent;
+  font-size: 2rem;
+}
+
+
