@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&family=Zen+Loop&display=swap');
-
-
 
 body {
   background: #c2d9de;
@@ -15,8 +12,7 @@ header {
   letter-spacing: 8px;
   background-image: linear-gradient(43deg, #eedd28 25%, #451dff 76%, #eedd28);
   background-clip: text;
-  color:transparent;
-  
+  color: transparent;
 }
 
 .container {
@@ -37,8 +33,7 @@ header {
 .player_grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 
-  repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .card {
@@ -49,9 +44,9 @@ header {
   background: navy;
   color: yellow;
   align-self: end;
-  margin: .5rem .5rem .5rem;
-  padding: .5rem;
-  box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+  margin: 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.1);
 }
 
 .card_title {
@@ -61,28 +56,28 @@ header {
 }
 
 .card_title::content {
-  color:yellow;
-} 
+  color: yellow;
+}
 
 .card__img {
-  width:100%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
-@media (min-width:40em) {
-.card.featured {
-  grid-row: span 2;
-  grid-column: span 2;
-}
+@media (min-width: 40em) {
+  .card.featured {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
 
-.card.featured .card__img {
-  aspect-ratio: 1 / 1.15;
-}
+  .card.featured .card__img {
+    aspect-ratio: 1 / 1.15;
+  }
 
-.card.featured .card_title {
-  font-size: 1.75rem;
-}
+  .card.featured .card_title {
+    font-size: 1.75rem;
+  }
 }
 
 .card.runnerUp {
@@ -95,7 +90,7 @@ header {
 
 a {
   color: yellow;
-  text-decoration:overline;
+  text-decoration: overline;
 }
 
 a:active {
@@ -129,14 +124,77 @@ a:active {
 
 .contact-button:hover {
   background-color: #0056b3;
-  
 }
 
 .contact {
   background-image: linear-gradient(97deg, #f53a67 35%, #0e6c9e 65%, #e49d0e);
   background-clip: text;
-  color:transparent;
+  color: transparent;
   font-size: 2rem;
 }
 
 
+@media (max-width: 768px) {
+  header {
+    font-size: 2.5rem;
+    line-height: 2.5em;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .player_grid {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  .card {
+    aspect-ratio: 1 / 1.5;
+  }
+
+  .player_content {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .card_title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    font-size: 2rem;
+    line-height: 2em;
+  }
+
+  .player_grid {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .card {
+    aspect-ratio: 1 / 1.5;
+  }
+
+  .player_content {
+    margin: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .card_title {
+    font-size: 0.875rem;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-button {
+    padding: 8px 16px;
+  }
+
+  .contact {
+    font-size: 1.5rem;
+  }
+}
